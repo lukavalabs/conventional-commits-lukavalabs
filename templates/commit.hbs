@@ -1,0 +1,21 @@
+*{{#if scope}} **{{scope}}:**
+{{~/if}} {{#if subject}}
+  {{~subject}}
+{{~else}}
+  {{~header}}
+{{~/if}}
+
+{{~#if pr }} ([#{{pr}}]({{@root.host}}/{{@root.owner}}/{{@root.repository}}/pullrequest/{{pr}})){{/if}}
+
+{{~!-- commit references --}}
+{{~#if references~}}
+  , closes
+  {{~#each references}} {{#if @root.linkReferences~}}
+    [{{~this.repository}}#{{this.issue~}}](
+      {{~@root.host}}/{{@root.owner}}/Monorepo/_workitems/edit/{{this.issue~}}
+    )
+  {{~else}}
+    {{~this.repository}}#{{this.issue}}
+  {{~/if}}{{/each}}
+{{~/if}}
+

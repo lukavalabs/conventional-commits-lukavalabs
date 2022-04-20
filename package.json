@@ -1,0 +1,38 @@
+{
+  "name": "conventional-changelog-lukavalabs",
+  "version": "1.0.0",
+  "description": "conventional-changelog lukavalabs preset",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukavalabs/conventional-commits-lukavalabs.git"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "conventionalcommits.org",
+    "preset"
+  ],
+  "files": [
+    "add-bang-notes.js",
+    "conventional-changelog.js",
+    "conventional-recommended-bump.js",
+    "index.js",
+    "parser-opts.js",
+    "writer-opts.js",
+    "templates"
+  ],
+  "author": "Joshua Reilly",
+  "engines": {
+    "node": ">=10"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukavalabs/conventional-commits-lukavalabs/issues"
+  },
+  "homepage": "https://github.com/lukavalabs/conventional-commits-lukavalabs#readme",
+  "dependencies": {
+    "compare-func": "^2.0.0",
+    "lodash": "^4.17.15",
+    "q": "^1.5.1"
+  }
+}
