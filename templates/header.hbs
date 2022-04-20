@@ -1,0 +1,21 @@
+{{#if isPatch~}}
+  ##
+{{~else~}}
+  #
+{{~/if}} {{#if @root.linkCompare~}}
+  [{{version}}](
+    {{~#if @root.host}}
+      {{~@root.host}}/
+    {{~/if}}
+    {{~#if @root.owner}}
+      {{~@root.owner}}/
+    {{~/if}}
+    {{~@root.repository~}}
+  /branchCompare?baseVersion=GT{{previousTag}}&targetVersion=GT{{currentTag}})
+{{~else}}
+  {{~version}}
+{{~/if}}
+{{~#if title}} "{{title}}"
+{{~/if}}
+{{~#if date}} ({{date}})
+{{/if}}
