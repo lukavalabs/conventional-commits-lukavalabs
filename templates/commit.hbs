@@ -11,11 +11,16 @@
 {{~#if references~}}
   , closes
   {{~#each references}} {{#if @root.linkReferences~}}
-    [{{~this.repository}}#{{this.issue~}}](
-      {{~@root.host}}/{{@root.owner}}/Monorepo/_workitems/edit/{{this.issue~}}
-    )
+    [
+    {{~#if this.owner}}
+      {{~this.owner}}/
+    {{~/if}}
+    {{~this.repository}}{{this.prefix}}{{this.issue}}]({{issueUrlFormat}})
   {{~else}}
-    {{~this.repository}}#{{this.issue}}
+    {{~#if this.owner}}
+      {{~this.owner}}/
+    {{~/if}}
+    {{~this.repository}}{{this.prefix}}{{this.issue}}
   {{~/if}}{{/each}}
 {{~/if}}
 
