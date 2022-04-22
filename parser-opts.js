@@ -3,9 +3,9 @@
 module.exports = function (config) {
     config = defaultConfig(config)
     return {
-        headerPattern: '^Merged PR (\\d+): (\\w*)(?:\\(([\\w$.\\-* ]*)\\))?: (.*)$',
+        headerPattern: /^Merged PR (\d+): (\w*)(?:\(([\w$.\-* ]*)\))?!?: (.*)$/,
         headerCorrespondence: ['pr', 'type', 'scope', 'subject'],
-        breakingHeaderPattern: '^(\w*)(?:\((.*)\))?!: (.*)$',
+        breakingHeaderPattern: /^Merged PR (\d+): (\w*)(?:\(([\w$.\-* ]*)\))?!: (.*)$/,
         noteKeywords: ['BREAKING CHANGE', 'BREAKING-CHANGE'],
         revertPattern: /^(?:Revert|revert:)\s"?([\s\S]+?)"?\s*This reverts commit (\w*)\./i,
         revertCorrespondence: ['header', 'hash'],
