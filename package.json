@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "conventional-changelog lukavalabs preset",
   "main": "index.js",
+  "scripts": {
+    "test-windows": "mocha --timeout 30000"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lukavalabs/conventional-commits-lukavalabs.git"
@@ -36,11 +39,17 @@
     "q": "^1.5.1"
   },
   "devDependencies": {
+    "better-than-before": "^1.0.0",
+    "chai": "^4.3.6",
+    "conventional-changelog-core": "^4.2.4",
     "eslint": "^8.13.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "git-dummy-commit": "^1.3.0",
+    "mocha": "^9.2.2",
+    "through2": "^4.0.2"
   }
 }
