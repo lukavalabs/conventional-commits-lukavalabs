@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/lukavalabs/conventional-commits-lukavalabs/compare/v1.1.0...v1.1.1) (2022-04-22)
+
+
+### 🛠 Fixes
+
+* package.json ([#23](https://github.com/lukavalabs/conventional-commits-lukavalabs/issues/23)) ([c2c39a7](https://github.com/lukavalabs/conventional-commits-lukavalabs/commit/c2c39a7259b592517dd5668229505919a8bf1aca))
+
 ## [1.1.0](https://github.com/lukavalabs/conventional-commits-lukavalabs/compare/v1.0.0...v1.1.0) (2022-04-22)
 
 
