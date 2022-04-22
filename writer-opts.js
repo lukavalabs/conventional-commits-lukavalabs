@@ -191,7 +191,7 @@ function defaultConfig(config) {
     { type: 'ci', section: 'Continuous Integration', hidden: true }
   ]
   config.issueUrlFormat = config.issueUrlFormat ||
-    '{{host}}/{{owner}}/{{repository}}/issues/{{id}}'
+    '{{host}}/{{repository}}/_workitems/edit/{{id}}'
   config.commitUrlFormat = config.commitUrlFormat ||
     '{{host}}/{{owner}}/{{repository}}/commit/{{hash}}'
   config.compareUrlFormat = config.compareUrlFormat ||
