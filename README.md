@@ -4,6 +4,8 @@
 
 ## Lukava Labs Convention
 
+An opinionated preset for conventional-changelog for use by Lukava Labs with Azure DevOps hosted repositories.
+
 ### Examples
 
 [npm-image]: https://badge.fury.io/js/conventional-changelog-lukavalabs.svg
