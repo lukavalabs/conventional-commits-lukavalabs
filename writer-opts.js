@@ -55,7 +55,7 @@ module.exports = function (config) {
     })
 }
 
-function findTypeEntry (types, commit) {
+function findTypeEntry(types, commit) {
   const typeKey = (commit.revert ? 'revert' : (commit.type || '')).toLowerCase()
   return types.find((entry) => {
     if (entry.type !== typeKey) {
@@ -68,7 +68,7 @@ function findTypeEntry (types, commit) {
   })
 }
 
-function getWriterOpts (config) {
+function getWriterOpts(config) {
   config = defaultConfig(config)
 
   return {
@@ -85,7 +85,7 @@ function getWriterOpts (config) {
       // Add an entry in the CHANGELOG if special Release-As footer
       // is used:
       if ((commit.footer && releaseAsRe.test(commit.footer)) ||
-          (commit.body && releaseAsRe.test(commit.body))) {
+        (commit.body && releaseAsRe.test(commit.body))) {
         discard = false
       }
 
@@ -96,7 +96,7 @@ function getWriterOpts (config) {
 
       // breaking changes attached to any type are still displayed.
       if (discard && (entry === undefined ||
-          entry.hidden)) return
+        entry.hidden)) return
 
       if (entry) commit.type = entry.section
 
@@ -174,7 +174,7 @@ function getWriterOpts (config) {
 }
 
 // merge user set configuration with default configuration.
-function defaultConfig (config) {
+function defaultConfig(config) {
   config = config || {}
   config.types = config.types || [
     { type: 'feat', section: 'Features' },
@@ -205,7 +205,7 @@ function defaultConfig (config) {
 
 // expand on the simple mustache-style templates supported in
 // configuration (we may eventually want to use handlebars for this).
-function expandTemplate (template, context) {
+function expandTemplate(template, context) {
   let expanded = template
   Object.keys(context).forEach(key => {
     expanded = expanded.replace(new RegExp(`{{${key}}}`, 'g'), context[key])
