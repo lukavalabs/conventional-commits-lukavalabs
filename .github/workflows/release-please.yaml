@@ -15,6 +15,7 @@ jobs:
         with:
           release-type: node
           pull-request-title-pattern: 'chore: release v${version}'
+          changelog-types: '[{"type":"ci","section":"☂️ Other","hidden":false},{"type":"docs","section":"📚 Documentation","hidden":false},{"type":"feat","section":"🎉 Features","hidden":false},{"type":"fix","section":"🛠 Fixes","hidden":false},{"type":"improve","section":"✨ Feature Improvements","hidden":false},{"type":"refactor","section":"📦 Code Refactoring","hidden":false},{"type":"style","section":"💎 Styles","hidden":false},{"type":"test","section":"🚨 Testing","hidden":false}]'
 
   publish-npm:
     runs-on: ubuntu-latest
