@@ -4,7 +4,8 @@
   "description": "conventional-changelog lukavalabs preset",
   "main": "index.js",
   "scripts": {
-    "test-windows": "mocha --timeout 30000"
+    "test": "c8 mocha --timeout 30000 test{,/*}.js",
+    "test-windows": "c8 mocha --timeout 60000 test{,/*}.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "better-than-before": "^1.0.0",
+    "c8": "^7.11.2",
     "chai": "^4.3.6",
     "conventional-changelog-core": "^4.2.4",
     "eslint": "^8.13.0",
